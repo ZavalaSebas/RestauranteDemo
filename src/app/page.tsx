@@ -1,4 +1,5 @@
 import { Hero } from '@/components/Hero';
+import { SignatureDish } from '@/components/SignatureDish';
 import { MenuSection } from '@/components/MenuSection';
 import { MenuQR } from '@/components/MenuQR';
 import { LocationMap } from '@/components/LocationMap';
@@ -13,6 +14,7 @@ export default function Home() {
           <MenuQR />
         </div>
       </div>
+      <SignatureDish />
       <MenuSection />
       <LocationMap />
       <SiteFooter />
