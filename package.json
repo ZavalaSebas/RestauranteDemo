@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "images:blur": "node ./scripts/generate-blur-placeholders.mjs"
   },
   "dependencies": {
     "firebase": "^12.3.0",
@@ -27,6 +28,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "react-icons": "^5.5.0",
+    "sharp": "^0.33.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -45,13 +45,14 @@ export function MenuSection() {
           {filtered.map(item => (
             <motion.div key={item.id} layout initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{duration:0.5}} className="group rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-100 shadow-sm hover:shadow-lg transition">
               <div className="relative h-44 w-full overflow-hidden">
-                <Image 
-                  src={item.image} 
-                  alt={item.name} 
-                  fill 
-                  sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw" 
-                  className="object-cover group-hover:scale-105 transition-transform duration-500" 
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   priority={item.id==='bruschetta'}
+                  placeholder="empty"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-2 left-3 text-white/90 font-semibold drop-shadow">{formatPrice(item.price)}</div>
