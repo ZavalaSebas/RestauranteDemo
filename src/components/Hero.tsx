@@ -28,13 +28,13 @@ export function Hero() {
           <motion.div initial={{opacity:0, scale:0.95}} whileInView={{opacity:1, scale:1}} transition={{duration:0.8, delay:0.15}} viewport={{once:true}} className="relative">
             <div className="grid grid-cols-2 gap-4 md:gap-6">
               <div className="relative h-40 md:h-52 rounded-2xl overflow-hidden shadow-lg border border-amber-100">
-                <Image src="/images/hero-plato.svg" alt="Plato creativo" fill sizes="(min-width:768px) 25vw, 50vw" className="object-cover" />
+                <Image src="/images/hero-plato.webp" alt="Plato creativo" fill sizes="(min-width:768px) 25vw, 50vw" className="object-cover" />
               </div>
               <div className="relative h-40 md:h-72 rounded-2xl overflow-hidden shadow-lg border border-rose-100 col-start-2 row-span-2">
-                <Image src="/images/hero-mesa.svg" alt="Mesa elegante" fill sizes="(min-width:768px) 25vw, 60vw" priority className="object-cover" />
+                <Image src="/images/hero-mesa.webp" alt="Mesa elegante" fill sizes="(min-width:768px) 25vw, 60vw" priority className="object-cover" />
               </div>
               <div className="relative h-40 md:h-52 rounded-2xl overflow-hidden shadow-lg border border-orange-100">
-                <Image src="/images/hero-ingredientes.svg" alt="Ingredientes frescos" fill sizes="(min-width:768px) 25vw, 50vw" className="object-cover" />
+                <Image src="/images/hero-ingredientes.webp" alt="Ingredientes frescos" fill sizes="(min-width:768px) 25vw, 50vw" className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white/70 backdrop-blur px-4 py-3 rounded-xl border border-amber-200 shadow text-sm font-medium text-amber-900">
                 Calidad & Sabor

@@ -22,7 +22,7 @@ export const menuItems: MenuItem[] = [
     name: 'Bruschetta Mediterránea',
     description: 'Pan tostado con tomate confitado, albahaca fresca y aceite de oliva extra virgen.',
     price: 4200,
-    image: '/images/bruschetta.svg',
+  image: '/images/bruschetta.webp',
     category: 'entradas',
   },
   {
@@ -30,7 +30,7 @@ export const menuItems: MenuItem[] = [
     name: 'Ensalada Gourmet',
     description: 'Mix de hojas, nueces caramelizadas, queso de cabra y vinagreta balsámica.',
     price: 5750,
-    image: '/images/ensalada.svg',
+  image: '/images/ensalada.webp',
     category: 'entradas',
   },
   {
@@ -38,7 +38,7 @@ export const menuItems: MenuItem[] = [
     name: 'Risotto de Hongos',
     description: 'Arborio cremoso con mezcla de setas frescas, parmesano y toque de trufa.',
     price: 10000,
-    image: '/images/risotto.svg',
+  image: '/images/risotto.webp',
     category: 'platos',
   },
   {
@@ -46,7 +46,7 @@ export const menuItems: MenuItem[] = [
     name: 'Salmón al Horno',
     description: 'Salmón noruego con costra de hierbas, puré de coliflor y espárragos.',
     price: 11600,
-    image: '/images/salmon.svg',
+  image: '/images/salmon.webp',
     category: 'platos',
   },
   {
@@ -54,7 +54,7 @@ export const menuItems: MenuItem[] = [
     name: 'Cheesecake de Frutos Rojos',
     description: 'Base de galleta artesanal y coulis de frutos rojos frescos.',
     price: 4650,
-    image: '/images/cheesecake.svg',
+  image: '/images/cheesecake.webp',
     category: 'postres',
   },
   {
@@ -62,7 +62,7 @@ export const menuItems: MenuItem[] = [
     name: 'Volcán de Chocolate',
     description: 'Bizcocho tibio con centro líquido de chocolate belga y helado de vainilla.',
     price: 5100,
-    image: '/images/lava-cake.svg',
+  image: '/images/lava-cake.webp',
     category: 'postres',
   },
   {
@@ -70,7 +70,7 @@ export const menuItems: MenuItem[] = [
     name: 'Copa de Vino Tinto Reserva',
     description: 'Selección especial con notas a frutos negros y roble.',
     price: 3900,
-    image: '/images/vino-tinto.svg',
+  image: '/images/vino-tinto.webp',
     category: 'bebidas',
   },
   {
@@ -78,7 +78,7 @@ export const menuItems: MenuItem[] = [
     name: 'Limonada Artesanal',
     description: 'Refrescante mezcla de limón, hierbabuena y jarabe natural.',
     price: 2600,
-    image: '/images/limonada.svg',
+  image: '/images/limonada.webp',
     category: 'bebidas',
   },
 ];
