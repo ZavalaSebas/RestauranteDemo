@@ -1,0 +1,57 @@
+{
+  "/images/bruschetta.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABQAgCdASoQAAwAA4BcJZgCdAYrdnJXK49+gAAA/u9UopA0YxoYJuef3ntMLDkzgiwThZw8TjITNUBmmeMUCnVG81TRTwtZCIxG3mSKQVSj9NWP8Nl6RmkJsGWB1ig7lHl3dY65YUAtCpeZyClMtc6V5PdAAA==",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/cheesecake.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAQCdASoQAAsAA4BcJQBOgBcKJ8UwAAD+9hPNhtEuWqTklunPqqzUE54Q4YilIOo33qwdr7mMLjswlfIVj0O9CJwbwxj2Z1TbYxCSc6C2W6NYWJ70aohvZw+zrAAA",
+    "width": 1050,
+    "height": 720
+  },
+  "/images/ensalada.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAwAA4BcJbACdH8AFd5UkQELmAD+yXqXMtyZYDSYTOoDXI9udSgHZZjMsrpD6Pwu8w89Pu/dUOwCZ0PuiTWaoF7G96MN6qHDgB+hcnOJamZAYrcvzzwA",
+    "width": 1200,
+    "height": 864
+  },
+  "/images/hero-ingredientes.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABwAgCdASoQAAwAA4BcJagCdAYs32d1tK6hOpmAAP7RLh2oWWnXwVPvDeTb+ueJBNsxZTV7hR9eQVcvk7at+JnEtl3BKnht4zNQopXmuO5MaV+VfwQA5d6ytRDUluBXrNFwrc7yYRDk1M6bwrIjic/n2bcpwwCZx2NPg4AA",
+    "width": 800,
+    "height": 600
+  },
+  "/images/hero-mesa.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoQAAsAA4BcJaACdADP0Cs0wgQAAP7m7Zl9KRkOZ37RGHm8qJpqJ6Rl7jCQhGaKLkbgahXEslPNvOAFL/Qt8Ez5Fmx/wDZfIvbt9JF2YLtZhLXHgnl9Stq+XtgAAA==",
+    "width": 920,
+    "height": 612
+  },
+  "/images/hero-plato.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAkAA4BcJQBOgMV9ursQ1ysAAP6yHX1VrP/N2tdS+AKbFBleVlh9lecLSlHalNoXFgVsctUO/Q8sra0G8fhEvEBXub4RV2lldt3XKHZUAAAA",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lava-cake.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwAgCdASoQAAsAA4BcJagCdAYuvd11QFx8i7ggAP7VxrbB87Fb7ulgOynb4ZDL4SJH24xZpPQHZKhPorRzbj769aoPVhRfuq/6DNMF6QWsGk9Cyw5J0tlCapUtbNhrFtpRVbfFjZu1qxKQMAA=",
+    "width": 650,
+    "height": 449
+  },
+  "/images/limonada.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwAgCdASoQAAwAA4BcJbACdAEfVBPzj+t1i9QAAPzuvWKCM2VU+2mWqYwbaL9vc0/EV6XPj1gxJJ8Fwd+ds6qfwV7Y1aVu47GMRYWMpEgAAA==",
+    "width": 1600,
+    "height": 1201
+  },
+  "/images/risotto.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQAgCdASoQAAsAA4BcJbACdAYv/qe8KkStRwAA/oao5zJDlcNlt6Cof4SaH2bdenV/sBKCYNCCPI2ul97Qj9FctCqyoTR4DTL0DLz4vpaevZjCRhNI870iXaxfpg0/VAbj28F2y0kkn1XR/WO4Seg2SDIZpU4AAAA=",
+    "width": 1000,
+    "height": 664
+  },
+  "/images/salmon.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADQAgCdASoQABAAA4BcJbACdFQg5/8WvrOeS7YQeawAAP7uUlW3+vL73xpBUW/nEgbtmqKu5ZF6U7JuCKeOlQGxjWJWBb+ghaB8NCwP/eWLU0dSjLB5CVAnFR4ienRTZGYajWYzuRz80hIbE4d1nwftSxacmborFMoEj9IkFF4mavr0Bzp/J62AAAA=",
+    "width": 2048,
+    "height": 2048
+  },
+  "/images/vino-tinto.webp": {
+    "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAwAgCdASoQAAsAA4BcJbACdAEQYmsFQYccAAD+6xFOX7JpCRICd3PFpf8tzIVlTxAEsY21xauUwfJzcPazK46S1ncM/ES5sq+AvI7FkvQOwrOTgAA=",
+    "width": 1920,
+    "height": 1278
+  }
+}

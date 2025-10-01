@@ -1,6 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import { categories, menuItems, formatPrice, MenuCategoryKey } from '@/data/menu';
+import { getImageMeta } from '@/data/imageMeta';
 import Image from 'next/image';
 import { useState, useMemo } from 'react';
 import { generateMenuPdf } from '@/utils/generateMenuPdf';
@@ -52,7 +53,8 @@ export function MenuSection() {
                   sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   priority={item.id==='bruschetta'}
-                  placeholder="empty"
+                  placeholder={getImageMeta(item.image) ? 'blur' : 'empty'}
+                  blurDataURL={getImageMeta(item.image)?.blurDataURL}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-2 left-3 text-white/90 font-semibold drop-shadow">{formatPrice(item.price)}</div>

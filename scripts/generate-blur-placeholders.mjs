@@ -13,24 +13,22 @@ const OUTPUT_FILE = path.join(process.cwd(), 'src', 'data', 'imageMeta.generated
 
 async function processImage(file) {
   const full = path.join(IMAGES_DIR, file);
-  const img = sharp(full);
-  const { width, height, format } = await img.metadata();
+  const original = fs.readFileSync(full);
+  let pipeline = sharp(original, { sequentialRead: true });
+  const { width, height } = await pipeline.metadata();
 
-  // Recompression to normalized quality (skip if already small)
-  const stat = fs.statSync(full);
-  if (stat.size > 40 * 1024) { // >40KB => recompress
-    const recompressed = await img.webp({ quality: 70 }).toBuffer();
+  // Recompress only if >40KB
+  if (original.length > 40 * 1024) {
+    const recompressed = await pipeline.webp({ quality: 70 }).toBuffer();
     fs.writeFileSync(full, recompressed);
+    pipeline = sharp(recompressed);
   }
 
-  // Tiny blur version (10px width) to base64
-  const blurBuf = await img
-    .resize({ width: 12 })
-    .webp({ quality: 40 })
+  const blurBuf = await pipeline
+    .resize({ width: 16 })
+    .webp({ quality: 38 })
     .toBuffer();
-
   const blurDataURL = `data:image/webp;base64,${blurBuf.toString('base64')}`;
-
   return { blurDataURL, width, height };
 }
 
