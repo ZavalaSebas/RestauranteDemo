@@ -3,7 +3,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 
 export function SiteFooter() {
   return (
-    <footer className="bg-amber-900 text-amber-50 py-14">
+    <footer id="contacto" className="bg-amber-900 text-amber-50 py-14">
       <div className="container mx-auto px-6 max-w-6xl grid md:grid-cols-4 gap-12">
         <div>
           <h3 className="font-serif text-2xl font-semibold mb-3">Restaurante Demo</h3>
@@ -13,7 +13,7 @@ export function SiteFooter() {
           <h4 className="font-semibold mb-3 tracking-wide uppercase text-xs text-amber-200">Contacto</h4>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2"><FaPhoneAlt className="text-amber-300" /><span>+506 2222 3333</span></li>
-            <li className="flex items-center gap-2"><FaLocationDot className="text-amber-300" /><span>Avenida Central 456, San José</span></li>
+            <li className="flex items-center gap-2"><FaLocationDot className="text-amber-300" /><span>San José, Costa Rica</span></li>
             <li><a href="mailto:reservas@demo.com" className="hover:underline">reservas@demo.com</a></li>
           </ul>
         </div>
