@@ -5,7 +5,7 @@ import heroMesa from '@/../public/images/hero-mesa.webp';
 
 export function SignatureDish() {
   return (
-    <section className="relative py-28 overflow-hidden">
+  <section className="relative pt-14 pb-20 md:pt-16 md:pb-24 overflow-hidden -mt-8">
       <div className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-multiply" style={{backgroundImage:'radial-gradient(circle at 25% 35%, #f59e0b 0, transparent 60%), radial-gradient(circle at 75% 65%, #f43f5e 0, transparent 55%)'}} />
       <div className="container mx-auto px-6 max-w-6xl relative">
         <div className="grid md:grid-cols-5 gap-14 items-center">
