@@ -3,33 +3,22 @@ import { motion } from 'framer-motion';
 import { categories, menuItems, formatPrice, MenuCategoryKey } from '@/data/menu';
 import Image from 'next/image';
 import { useState, useMemo } from 'react';
-import jsPDF from 'jspdf';
+import { generateMenuPdf } from '@/utils/generateMenuPdf';
 
 export function MenuSection() {
   const [active, setActive] = useState<MenuCategoryKey>('entradas');
 
   const filtered = useMemo(() => menuItems.filter(i => i.category === active), [active]);
 
-  function downloadPDF() {
-    const doc = new jsPDF();
-    doc.setFontSize(18);
-    doc.text('Menú Restaurante Demo', 14, 20);
-    doc.setFontSize(12);
-    let y = 32;
-    categories.forEach(cat => {
-      doc.setFontSize(14);
-      doc.text(cat.label, 14, y); y += 6;
-      doc.setFontSize(11);
-      menuItems.filter(m=>m.category===cat.key).forEach(item => {
-        const line = `${item.name} - ${formatPrice(item.price)}`;
-        doc.text(line, 16, y); y += 5;
-        const split = doc.splitTextToSize(item.description, 170);
-        doc.text(split, 18, y); y += (split.length * 5) + 2;
-        if (y > 270) { doc.addPage(); y = 20; }
-      });
-      y += 4;
-    });
-    doc.save('menu.pdf');
+  const [pdfLoading, setPdfLoading] = useState(false);
+
+  async function downloadPDF() {
+    try {
+      setPdfLoading(true);
+      await generateMenuPdf(menuItems);
+    } finally {
+      setPdfLoading(false);
+    }
   }
 
   return (
@@ -45,7 +34,10 @@ export function MenuSection() {
             {categories.map(c => (
               <button key={c.key} onClick={()=>setActive(c.key)} className={`px-4 py-2 rounded-full text-sm font-medium transition border ${active===c.key ? 'bg-amber-600 text-white border-amber-600 shadow' : 'bg-white text-amber-700 border-amber-300 hover:bg-amber-50'}`}>{c.label}</button>
             ))}
-            <button onClick={downloadPDF} className="px-4 py-2 rounded-full text-sm font-medium bg-rose-600 text-white hover:bg-rose-500 transition shadow">Descargar PDF</button>
+            <button onClick={downloadPDF} disabled={pdfLoading} className="px-4 py-2 rounded-full text-sm font-medium bg-rose-600 text-white hover:bg-rose-500 disabled:opacity-60 disabled:cursor-not-allowed transition shadow flex items-center gap-2">
+              {pdfLoading && <span className="h-3 w-3 rounded-full border-2 border-white border-t-transparent animate-spin" />}
+              {pdfLoading ? 'Generando...' : 'Descargar PDF'}
+            </button>
           </div>
         </div>
 
@@ -53,7 +45,14 @@ export function MenuSection() {
           {filtered.map(item => (
             <motion.div key={item.id} layout initial={{opacity:0, y:20}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{duration:0.5}} className="group rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-100 shadow-sm hover:shadow-lg transition">
               <div className="relative h-44 w-full overflow-hidden">
-                <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <Image 
+                  src={item.image} 
+                  alt={item.name} 
+                  fill 
+                  sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw" 
+                  className="object-cover group-hover:scale-105 transition-transform duration-500" 
+                  priority={item.id==='bruschetta'}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-2 left-3 text-white/90 font-semibold drop-shadow">{formatPrice(item.price)}</div>
               </div>

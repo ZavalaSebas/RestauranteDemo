@@ -8,11 +8,11 @@ export function LocationMap() {
             <p className="mt-2 text-neutral-600 max-w-xl">Nos encontramos en el corazón de la ciudad, fácil acceso y ambiente acogedor.</p>
           </div>
           <div className="flex gap-4 text-sm">
-            <div className="bg-white/80 backdrop-blur px-5 py-3 rounded-xl border border-amber-200 shadow flex flex-col">
-              <span className="font-semibold text-amber-800">Horarios</span>
-              <span>Lun - Jue: 12:00 - 23:00</span>
-              <span>Vie - Sáb: 12:00 - 00:00</span>
-              <span>Dom: 13:00 - 22:00</span>
+            <div className="bg-amber-900/90 text-amber-50 backdrop-blur px-5 py-4 rounded-xl border border-amber-800/60 shadow flex flex-col leading-relaxed min-w-[220px]">
+              <span className="font-semibold text-white tracking-wide uppercase text-xs mb-2">Horarios</span>
+              <span className="text-amber-100">Lun - Jue: <strong className="text-amber-50">12:00 - 23:00</strong></span>
+              <span className="text-amber-100">Vie - Sáb: <strong className="text-amber-50">12:00 - 00:00</strong></span>
+              <span className="text-amber-100">Dom: <strong className="text-amber-50">13:00 - 22:00</strong></span>
             </div>
           </div>
         </div>
