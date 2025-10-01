@@ -52,9 +52,9 @@ export default function RootLayout({
           name:'Restaurante Demo Gourmet',
           image:'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=60',
           servesCuisine:['Mediterránea','Fusión'],
-          priceRange:'€€',
-          address:{'@type':'PostalAddress', streetAddress:'Calle Principal 123', addressLocality:'Ciudad', addressRegion:'Provincia', postalCode:'00000', addressCountry:'ES'},
-          telephone:'+34 600 000 000',
+          priceRange:'₡₡',
+          address:{'@type':'PostalAddress', streetAddress:'Avenida Central 456', addressLocality:'San José', addressRegion:'San José', postalCode:'10101', addressCountry:'CR'},
+          telephone:'+506 2222 3333',
           url:'https://restaurante-demo.local'
         })}</Script>
       </head>

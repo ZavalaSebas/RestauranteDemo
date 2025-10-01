@@ -12,8 +12,8 @@ export function SiteFooter() {
         <div>
           <h4 className="font-semibold mb-3 tracking-wide uppercase text-xs text-amber-200">Contacto</h4>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2"><FaPhoneAlt className="text-amber-300" /><span>+34 600 000 000</span></li>
-            <li className="flex items-center gap-2"><FaLocationDot className="text-amber-300" /><span>Calle Principal 123, Ciudad</span></li>
+            <li className="flex items-center gap-2"><FaPhoneAlt className="text-amber-300" /><span>+506 2222 3333</span></li>
+            <li className="flex items-center gap-2"><FaLocationDot className="text-amber-300" /><span>Avenida Central 456, San José</span></li>
             <li><a href="mailto:reservas@demo.com" className="hover:underline">reservas@demo.com</a></li>
           </ul>
         </div>
@@ -27,7 +27,7 @@ export function SiteFooter() {
         <div>
           <h4 className="font-semibold mb-3 tracking-wide uppercase text-xs text-amber-200">Reservas</h4>
           <p className="text-sm text-amber-100 mb-4">Escríbenos por WhatsApp para confirmar tu mesa al instante.</p>
-          <a href="https://wa.me/34600000000?text=Hola%20quiero%20reservar" target="_blank" className="inline-flex rounded-full bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 text-sm font-medium shadow-lg shadow-green-600/30">Reservar</a>
+          <a href="https://wa.me/50622223333?text=Hola%20quiero%20reservar" target="_blank" className="inline-flex rounded-full bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 text-sm font-medium shadow-lg shadow-green-600/30">Reservar</a>
         </div>
       </div>
       <div className="mt-12 text-center text-xs text-amber-300">© {new Date().getFullYear()} Restaurante Demo. Todos los derechos reservados.</div>

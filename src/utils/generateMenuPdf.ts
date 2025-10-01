@@ -39,7 +39,7 @@ function drawFooter(doc: jsPDF) {
   doc.setFont('helvetica','normal');
   doc.setFontSize(8);
   doc.setTextColor(120);
-  doc.text('© Restaurante Demo Gourmet · Reservas: +34 600 000 000 · https://restaurante-demo.local', w/2, h - 10, { align: 'center' });
+  doc.text('© Restaurante Demo Gourmet · Reservas: +506 2222 3333 · https://restaurante-demo.local', w/2, h - 10, { align: 'center' });
 }
 
 async function generateQRDataUrl(url: string) {
@@ -54,17 +54,16 @@ export async function generateMenuPdf(menuItems: MenuItem[]) {
   const doc = new jsPDF();
   let page = 1;
   drawHeader(doc, page);
-  drawFooter(doc);
-
+  
+  // Generar QR primero y reservar espacio
   const url = 'https://restaurante-demo.local/#menu';
   const qr = await generateQRDataUrl(url);
-  if (qr) {
-    doc.addImage(qr, 'PNG', doc.internal.pageSize.getWidth() - 40, 14, 26, 26, 'qr', 'FAST');
-  }
+  
+  drawFooter(doc);
 
   let y = 34;
   const left = 14;
-  const maxWidth = 180;
+  const maxWidth = qr ? 140 : 180; // Reducir ancho si hay QR
 
   categories.forEach(cat => {
     // Category heading
@@ -117,5 +116,12 @@ export async function generateMenuPdf(menuItems: MenuItem[]) {
     }
   });
 
-  doc.save('menu_restaurante_demo.pdf');
+  // Agregar QR al final para que aparezca encima
+  if (qr) {
+    // Volver a la primera página para añadir el QR
+    doc.setPage(1);
+    doc.addImage(qr, 'PNG', doc.internal.pageSize.getWidth() - 40, 30, 26, 26, 'qr', 'FAST');
+  }
+
+  doc.save('menu_restaurante_demo_cr.pdf');
 }
