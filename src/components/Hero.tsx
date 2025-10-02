@@ -6,6 +6,7 @@ import { getImageMeta } from '@/data/imageMeta';
 
 export function Hero() {
   return (
+    <>
   <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-28 bg-rose-50">
       {/* Fondo con imagen */}
       <div className="absolute inset-0 z-0">
@@ -62,6 +63,11 @@ export function Hero() {
         </div>
       </div>
     </section>
+    {/* Transición de color inferior para evitar corte blanco entre Hero y la siguiente sección */}
+    <div className="relative -mt-8 h-24 pointer-events-none select-none">
+      <div className="absolute inset-0 bg-gradient-to-b from-rose-50/0 via-rose-50/75 to-amber-50" />
+    </div>
+    </>
   );
 }
 
