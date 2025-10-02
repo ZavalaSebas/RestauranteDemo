@@ -1,5 +1,6 @@
 import { Hero } from '@/components/Hero';
 import { MenuSection } from '@/components/MenuSection';
+import { Highlights } from '@/components/Highlights';
 import { MenuQR } from '@/components/MenuQR';
 import { LocationMap } from '@/components/LocationMap';
 import { SiteFooter } from '@/components/SiteFooter';
@@ -14,7 +15,8 @@ export default function Home() {
           <MenuQR />
         </div>
       </div>
-      <SignatureDish />
+  <SignatureDish />
+  <Highlights />
       <MenuSection />
       <LocationMap />
       <SiteFooter />

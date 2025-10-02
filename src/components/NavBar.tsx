@@ -33,7 +33,9 @@ export function NavBar() {
   const close = () => setOpen(false);
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/95 shadow-sm border-b border-rose-100/60' : 'bg-gradient-to-b from-white/85 to-white/10'} `} id="top">
+    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
+      ? 'backdrop-blur-md bg-white/95 shadow-sm border-b border-rose-100/60'
+      : 'bg-[linear-gradient(to_bottom,rgba(255,255,255,0.88)_0%,rgba(255,255,255,0.70)_38%,rgba(255,255,255,0.35)_68%,rgba(255,255,255,0)_100%)]'} `} id="top">
       <nav className="mx-auto px-6 md:px-10 max-w-7xl h-24 flex items-center justify-between">
         <a href="#top" className="font-serif text-2xl md:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-rose-600 via-amber-600 to-rose-500 leading-none">Restaurante Demo</a>
         <div className="hidden md:flex items-center gap-10 text-base md:text-lg font-medium">

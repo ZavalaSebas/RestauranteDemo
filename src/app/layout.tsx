@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from '@/components/NavBar';
+import { FloatingCTA } from '@/components/FloatingCTA';
 import Script from "next/script";
 import { AnalyticsLoader } from '@/components/AnalyticsLoader';
 
@@ -61,8 +62,9 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[radial-gradient(circle_at_30%_20%,rgba(255,240,240,0.6),transparent_60%),radial-gradient(circle_at_80%_70%,rgba(255,228,200,0.5),transparent_55%)]`} suppressHydrationWarning={true}>
         <NavBar />
-	    {children}
-	    <AnalyticsLoader />
+      {children}
+      <FloatingCTA />
+      <AnalyticsLoader />
         <div id="analytics-root" />
       </body>
     </html>
