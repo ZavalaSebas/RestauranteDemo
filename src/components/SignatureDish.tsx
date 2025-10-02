@@ -19,17 +19,10 @@ export function SignatureDish() {
 						</p>
 					</motion.div>
 					<motion.div initial={{opacity:0, scale:0.96}} whileInView={{opacity:1, scale:1}} transition={{duration:0.8, delay:0.1}} viewport={{once:true}} className="relative">
-						<div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-rose-200">
-							  <Image src="/images/hero-plato.webp" alt="Plato insignia" fill sizes="(min-width:768px) 40vw, 100vw" className="object-cover" placeholder="blur" blurDataURL={getImageMeta('/images/hero-plato.webp')?.blurDataURL} />
-							<div className="absolute inset-0 bg-gradient-to-t from-rose-900/40 via-transparent" />
-							<div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur rounded-xl px-4 py-3 text-sm font-medium text-rose-800 flex items-center justify-between">
-								<span>Degustación de la Casa</span>
-								<span className="text-rose-500">Edición Limitada</span>
-							</div>
-						</div>
-						<div className="absolute -bottom-8 -right-6 bg-white/80 backdrop-blur rounded-2xl border border-amber-200 shadow-lg p-4 max-w-[240px] text-xs text-amber-900">
-							Ingredientes trazables | Productores locales | Innovación respetuosa
-						</div>
+									<div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-rose-200">
+										<Image src="/images/hero-plato.webp" alt="Plato insignia" fill sizes="(min-width:768px) 40vw, 100vw" className="object-cover" placeholder="blur" blurDataURL={getImageMeta('/images/hero-plato.webp')?.blurDataURL} />
+										<div className="absolute inset-0 bg-gradient-to-t from-rose-900/40 via-transparent" />
+									</div>
 					</motion.div>
 				</div>
 			</div>
