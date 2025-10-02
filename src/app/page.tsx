@@ -16,8 +16,8 @@ export default function Home() {
         </div>
       </div>
   <SignatureDish />
-  <Highlights />
-      <MenuSection />
+    <MenuSection />
+    <Highlights />
       <LocationMap />
       <SiteFooter />
     </div>
