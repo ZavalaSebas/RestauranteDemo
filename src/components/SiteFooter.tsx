@@ -12,16 +12,21 @@ export function SiteFooter() {
         <div>
           <h4 className="font-semibold mb-3 tracking-wide uppercase text-xs text-amber-200">Contacto</h4>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2"><FaPhoneAlt className="text-amber-300" /><span>+506 2222 3333</span></li>
+            <li className="flex items-center gap-2">
+              <FaPhoneAlt className="text-amber-300" />
+              <a href="tel:+50622223333" className="hover:underline" aria-label="Llamar al restaurante">+506 2222 3333</a>
+            </li>
             <li className="flex items-center gap-2"><FaLocationDot className="text-amber-300" /><span>San José, Costa Rica</span></li>
-            <li><a href="mailto:reservas@demo.com" className="hover:underline">reservas@demo.com</a></li>
+            <li>
+              <a href="mailto:reservas@demo.com?subject=Reserva%20Restaurante&body=Hola%2C%20quiero%20reservar%20para%20(fecha)%20a%20las%20(hora)%20para%20(número%20de%20personas)." className="hover:underline" aria-label="Enviar correo de reservas">reservas@demo.com</a>
+            </li>
           </ul>
         </div>
         <div>
           <h4 className="font-semibold mb-3 tracking-wide uppercase text-xs text-amber-200">Redes</h4>
-          <div className="flex gap-4 text-xl">
-            <a aria-label="Instagram" href="#" className="hover:text-rose-200 transition"><FaInstagram /></a>
-            <a aria-label="Facebook" href="#" className="hover:text-rose-200 transition"><FaFacebook /></a>
+          <div className="flex gap-5 text-2xl">
+            <a aria-label="Instagram" href="https://instagram.com/restaurante.demo" target="_blank" rel="noopener" className="hover:text-rose-200 transition"> <FaInstagram /> </a>
+            <a aria-label="Facebook" href="https://facebook.com/restaurantedemo" target="_blank" rel="noopener" className="hover:text-rose-200 transition"> <FaFacebook /> </a>
           </div>
         </div>
         <div>

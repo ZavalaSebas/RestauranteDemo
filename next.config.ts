@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
         pathname: '/**'
       }
     ]
+    ,
+    // Desactiva el optimizador dinámico para evitar fallos en hosting estático/preview
+    // Sirve directamente /public/... asegurando que se vean las imágenes.
+    unoptimized: true
   },
   async headers() {
     return [

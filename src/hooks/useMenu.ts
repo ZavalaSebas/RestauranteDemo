@@ -11,7 +11,7 @@ import { menuItems as staticMenu } from '@/data/menu';
 
 // Shape stored in Firestore (if later integrated)
 export function useMenu() {
-  const [items, setItems] = useState<MenuItem[]>(staticMenu);
+  const [items] = useState<MenuItem[]>(staticMenu); // static for now; future Firestore will update
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -29,8 +29,11 @@ export function useMenu() {
         // const snap = await getDocs(collection(db, 'menu'));
         // const remote: MenuItem[] = snap.docs.map(d => ({ id: d.id, ...d.data() }) as MenuItem);
         // if (!cancelled && remote.length) setItems(remote); else console.info('Sin datos remotos, usando estáticos');
-      } catch (e:any) {
-        if (!cancelled) setError(e?.message || 'Error cargando menú');
+      } catch (e: unknown) {
+        if (!cancelled) {
+          const message = e instanceof Error ? e.message : 'Error cargando menú';
+          setError(message);
+        }
       } finally {
         if (!cancelled) setLoading(false);
       }

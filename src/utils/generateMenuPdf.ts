@@ -9,7 +9,6 @@ const BRAND_DARK = [68, 32, 6]; // amber-950 tone
 
 function drawHeader(doc: jsPDF, page: number) {
   const w = doc.internal.pageSize.getWidth();
-  const h = doc.internal.pageSize.getHeight();
   // Gradient bar (approx simulated)
   const steps = 20;
   for (let i = 0; i < steps; i++) {
